@@ -18,7 +18,7 @@ export default function Header() {
           <div className="h-8 w-8 rounded-full bg-brand-600 flex items-center justify-center text-white">
             <i className="fa-solid fa-bone"></i>
           </div>
-          <span className="font-semibold">Elgawadi Orthopedic Clinic</span>
+          <span className="font-semibold">Elgawadi</span>
         </div>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           {nav.map((n) => (

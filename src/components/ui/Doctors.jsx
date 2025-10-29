@@ -12,7 +12,7 @@ export default function Doctors({ items = [] }) {
               <p className="font-semibold">{d.name}</p>
               <p className="text-sm text-slate-600">{d.speciality}</p>
               <div className="mt-3 flex items-center justify-between">
-                <button className="btn btn-outline text-sm">Book Appointment</button>
+                <a href="/booking" className="btn btn-outline text-sm">Book Appointment</a>
                 <div className="text-xs text-slate-500">⭐ {d.rating}</div>
               </div>
             </div>
