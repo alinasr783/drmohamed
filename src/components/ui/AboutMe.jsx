@@ -2,13 +2,13 @@ import React from 'react'
 
 export default function AboutMe() {
   return (
-    <section id="about" className="section">
+    <section id="about" className="section overflow-x-hidden">
       <h2 className="section-title">About Me</h2>
       <div className="container grid md:grid-cols-2 gap-8 items-center">
         <div className="card overflow-hidden">
           <img className="w-full h-64 md:h-[52rem] object-cover" src="src/assets/images/hero.png" alt="Orthopedic doctor" />
         </div>
-        <div>
+        <div className="break-words min-w-0">
           <h3 className="text-2xl font-semibold">Dr. Mohamed Elgawadi</h3>
           <p className="text-slate-700 mt-1">MSc, MD, FRCS (Tr & Orth)</p>
           <p className="text-slate-600">
@@ -75,11 +75,11 @@ export default function AboutMe() {
             </div>
           </div>
 
-          <div className="mt-6 flex gap-3 text-brand-700">
-            <a className="btn btn-outline" href="https://www.facebook.com/share/14M2aEM9Q56/" target="_blank" rel="noreferrer"><i className="fa-brands fa-facebook"></i> Facebook</a>
-            <a className="btn btn-outline" href="https://www.instagram.com/the_bone_doctor_?igsh=MXJwem0zejZ3empqOQ==" target="_blank" rel="noreferrer"><i className="fa-brands fa-instagram"></i> Instagram</a>
-            <a className="btn btn-outline" href="https://www.tiktok.com/@mohamedgawadi?_t=ZS-90vbkKQINnz&_r=1" target="_blank" rel="noreferrer"><i className="fa-brands fa-tiktok"></i> TikTok</a>
-            <a className="btn btn-outline" href="https://www.linkedin.com/in/mohamed-elgawadi-58a8bab8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <div className="mt-6 flex flex-wrap gap-3 text-brand-700">
+            <a className="btn btn-outline whitespace-normal" href="https://www.facebook.com/share/14M2aEM9Q56/" target="_blank" rel="noreferrer"><i className="fa-brands fa-facebook"></i> Facebook</a>
+            <a className="btn btn-outline whitespace-normal" href="https://www.instagram.com/the_bone_doctor_?igsh=MXJwem0zejZ3empqOQ==" target="_blank" rel="noreferrer"><i className="fa-brands fa-instagram"></i> Instagram</a>
+            <a className="btn btn-outline whitespace-normal" href="https://www.tiktok.com/@mohamedgawadi?_t=ZS-90vbkKQINnz&_r=1" target="_blank" rel="noreferrer"><i className="fa-brands fa-tiktok"></i> TikTok</a>
+            <a className="btn btn-outline whitespace-normal" href="https://www.linkedin.com/in/mohamed-elgawadi-58a8bab8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin"></i> LinkedIn</a>
           </div>
         </div>
       </div>
