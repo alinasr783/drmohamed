@@ -7,8 +7,10 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 items-start">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="h-6 w-6 rounded-md bg-brand-600" />
-              <span className="font-semibold">Elgawadi Orthopedic Clinic</span>
+              <div className="h-8 w-8 rounded-full bg-brand-600 flex items-center justify-center text-white">
+                <i className="fa-solid fa-bone"></i>
+              </div>
+              <span className="font-semibold">Elgawadi</span>
             </div>
             <p className="text-sm text-slate-600">
               Comprehensive care, modern equipment, and personalized treatment plans.

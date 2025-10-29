@@ -25,3 +25,19 @@ window.addEventListener('load', () => {
   setTimeout(scrollToHash, 50)
 })
 window.addEventListener('hashchange', scrollToHash)
+
+// Reveal sections on scroll for modern feel
+window.addEventListener('load', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-in')
+      }
+    })
+  }, { threshold: 0.1 })
+
+  document.querySelectorAll('.section').forEach((el) => {
+    el.classList.add('reveal')
+    observer.observe(el)
+  })
+})
