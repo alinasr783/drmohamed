@@ -19,7 +19,6 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><a href="/" className="text-slate-700 hover:text-brand-700">Home</a></li>
               <li><a href="/booking" className="text-slate-700 hover:text-brand-700">Booking</a></li>
-              <li><a href="/payment" className="text-slate-700 hover:text-brand-700">Payment</a></li>
               <li><a href="/#about" className="text-slate-700 hover:text-brand-700">About</a></li>
               <li><a href="/#gallery" className="text-slate-700 hover:text-brand-700">Gallery</a></li>
               <li><a href="/#contact" className="text-slate-700 hover:text-brand-700">Contact</a></li>

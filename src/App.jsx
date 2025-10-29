@@ -8,7 +8,6 @@ import AboutMe from './components/ui/AboutMe'
 import Gallery from './components/ui/Gallery'
 import Contact from './components/ui/Contact'
 import Booking from './pages/Booking'
-import Payment from './pages/Payment'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 
@@ -19,7 +18,6 @@ import { gallery } from './data/gallery'
 function App() {
   const pathname = typeof window !== 'undefined' ? window.location.pathname : '/'
   const isBooking = pathname.startsWith('/booking')
-  const isPayment = pathname.startsWith('/payment')
   const isLogin = pathname.startsWith('/login')
   const isDashboard = pathname.startsWith('/dashboard')
   return (
@@ -28,11 +26,6 @@ function App() {
       {isBooking ? (
         <>
           <Booking />
-          <Footer />
-        </>
-      ) : isPayment ? (
-        <>
-          <Payment />
           <Footer />
         </>
       ) : isLogin ? (

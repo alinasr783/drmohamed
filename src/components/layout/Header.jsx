@@ -3,7 +3,6 @@ import React from 'react'
 const nav = [
   { label: 'Home', href: '/' },
   { label: 'Booking', href: '/booking' },
-  { label: 'Payment', href: '/payment' },
   { label: 'About', href: '/#about' },
   { label: 'Gallery', href: '/#gallery' },
   { label: 'Contact', href: '/#contact' },
