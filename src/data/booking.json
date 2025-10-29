@@ -1,0 +1,20 @@
+{
+  "doctor": {
+    "name": "Dr. Mohamed Elgawadi",
+    "speciality": "Joint Surgery & Arthroscopy · Sports injuries"
+  },
+  "services": [
+    { "id": "joint-surgery", "title": "Joint Surgery" },
+    { "id": "arthroscopy", "title": "Arthroscopy" },
+    { "id": "sports-injuries", "title": "Sports Injuries" },
+    { "id": "trauma-surgery", "title": "Trauma Surgery" },
+    { "id": "arthroplasty", "title": "Arthroplasty" }
+  ],
+  "times": [
+    "09:00 AM",
+    "10:30 AM",
+    "02:00 PM",
+    "03:30 PM",
+    "05:00 PM"
+  ]
+}

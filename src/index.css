@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+/* Base resets + design tokens */
+@layer base {
+  html, body, #root { height: 100%; }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-white text-slate-900 font-sans; }
+  a { @apply text-brand-700 hover:text-brand-600; }
+}
+
+/* Shared utilities */
+@layer components {
+  .btn { @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors; }
+  .btn-primary { @apply bg-brand-600 text-white hover:bg-brand-700 shadow-soft; }
+  .btn-outline { @apply border border-brand-600 text-brand-700 hover:bg-brand-50; }
+  .card { @apply rounded-xl bg-white shadow-card; }
+  .section { @apply py-12 md:py-16; }
+  .section-title { @apply text-xl md:text-2xl font-semibold text-center mb-8; }
+}
