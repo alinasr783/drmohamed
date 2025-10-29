@@ -6,7 +6,7 @@ export default function AboutMe() {
       <h2 className="section-title">About Me</h2>
       <div className="container grid md:grid-cols-2 gap-8 items-center">
         <div className="card overflow-hidden">
-          <img className="w-full h-64 md:h-[52rem] object-cover" src="src/assets/images/hero.png" alt="Orthopedic doctor" />
+          <img className="w-full h-94 md:h-[52rem] object-cover" src="https://i.ibb.co/Y4BXpscw/watermarked-07b7478d-3430-4301-8a1d-2063d5fa6410.png" alt="Orthopedic doctor" />
         </div>
         <div className="break-words min-w-0">
           <h3 className="text-2xl font-semibold">Dr. Mohamed Elgawadi</h3>
