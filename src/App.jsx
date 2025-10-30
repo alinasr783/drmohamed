@@ -6,6 +6,7 @@ import Services from './components/ui/Services'
 import Testimonials from './components/ui/Testimonials'
 import AboutMe from './components/ui/AboutMe'
 import Gallery from './components/ui/Gallery'
+import Videos from './components/ui/Videos'
 import Conferences from './components/ui/Conferences'
 import AlAhly from './components/ui/AlAhly'
 import Contact from './components/ui/Contact'
@@ -17,6 +18,7 @@ import { DeveloperCredit } from './components/shared/DeveloperCredit'
 import { services } from './data/services'
 import { testimonials } from './data/testimonials'
 import { gallery } from './data/gallery'
+import { videos } from './data/videos'
 import { conferences } from './data/conferences'
 import { alAhly } from './data/alAhly'
 
@@ -52,6 +54,7 @@ function App() {
           <Hero />
           <Services items={services} />
           <Gallery items={gallery} />
+          <Videos items={videos} />
           <Conferences items={conferences} />
           <AlAhly items={alAhly} />
           <Contact />

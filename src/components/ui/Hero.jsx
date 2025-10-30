@@ -3,7 +3,7 @@ import React from 'react'
 export default function Hero() {
   return (
     <section className="section">
-      <div className="container grid md:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
+      <div className="container grid md:grid-cols-[1.1fr_0.9fr] gap-10 items-center mt-2.5">
         <div>
           <p className="text-brand-700 font-semibold">Mohamed Elgawadi</p>
           <h1 className="text-3xl md:text-4xl font-bold mt-2">
