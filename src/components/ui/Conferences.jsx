@@ -56,23 +56,24 @@ export default function Conferences({ items = [] }) {
             <i className="fa-solid fa-chevron-right"></i>
           </button>
 
-          {/* gradient edges */}
-          <div className="pointer-events-none absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-white to-transparent" />
-          <div className="pointer-events-none absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-white to-transparent" />
+          {/* gradient edges (desktop only) */}
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-white to-transparent hidden md:block" />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-white to-transparent hidden md:block" />
 
           {/* Horizontal modern slider */}
-          <div ref={sliderRef} className="overflow-x-auto snap-x snap-mandatory -mx-4 px-4 md:-mx-8 md:px-8">
+          <div ref={sliderRef} className="overflow-x-auto snap-x snap-mandatory px-4 md:-mx-8 md:px-8">
             <div className="flex gap-4 md:gap-6">
               {items.map((c, i) => (
                 <div
                   key={i}
-                  className="group snap-start relative w-[16rem] md:w-[20rem] shrink-0 rounded-xl overflow-hidden bg-white ring-1 ring-slate-200 ring-offset-1 ring-offset-white shadow-card transition-transform duration-300 ease-out hover:shadow-soft hover:-translate-y-0.5"
+                  className="group snap-center md:snap-start relative w-[16rem] md:w-[20rem] shrink-0 rounded-xl overflow-hidden bg-white ring-1 ring-slate-200 ring-offset-1 ring-offset-white shadow-card transition-transform duration-300 ease-out hover:shadow-soft hover:-translate-y-0.5"
                 >
                   {/* Image */}
                   <img
                     src={Array.isArray(c.images) && c.images.length ? c.images[0] : c.image}
                     alt={c.title}
                     loading="lazy"
+                    sizes="(max-width: 768px) 90vw, 400px"
                     className="h-40 w-full object-cover cursor-zoom-in"
                     onClick={() => openLightbox(i, 0)}
                   />
@@ -160,6 +161,7 @@ export default function Conferences({ items = [] }) {
                   ? items[lightbox.confIndex].images[lightbox.photoIndex]
                   : items[lightbox.confIndex]?.image}
                 alt={items[lightbox.confIndex]?.title || 'Conference photo'}
+                sizes="100vw"
                 className="w-full max-h-[80vh] object-contain"
               />
 

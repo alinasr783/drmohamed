@@ -29,7 +29,7 @@ export default function Header() {
     : 'bg-white/70 backdrop-blur'
 
   return (
-    <header className={`sticky z-40 ${scrolled ? 'top-[10px]' : 'top-0'}`}>
+    <header className={`fixed md:sticky z-40 left-0 right-0 ${scrolled ? 'top-[10px]' : 'top-0'}`}>
       <div className="container">
         <div className={`${frameBase} ${frameStyle} ${scrolled ? 'max-w-[calc(100%-2rem)] md:max-w-[calc(100%-4rem)] mx-auto' : ''} ${framePadding}`}>
           <div className={`flex items-center ${scrolled ? 'gap-1' : 'gap-2'}`}>
