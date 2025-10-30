@@ -6,6 +6,8 @@ import Services from './components/ui/Services'
 import Testimonials from './components/ui/Testimonials'
 import AboutMe from './components/ui/AboutMe'
 import Gallery from './components/ui/Gallery'
+import Conferences from './components/ui/Conferences'
+import AlAhly from './components/ui/AlAhly'
 import Contact from './components/ui/Contact'
 import Booking from './pages/Booking'
 import Login from './pages/Login'
@@ -14,6 +16,8 @@ import Dashboard from './pages/Dashboard'
 import { services } from './data/services'
 import { testimonials } from './data/testimonials'
 import { gallery } from './data/gallery'
+import { conferences } from './data/conferences'
+import { alAhly } from './data/alAhly'
 
 function App() {
   const pathname = typeof window !== 'undefined' ? window.location.pathname : '/'
@@ -39,13 +43,16 @@ function App() {
           <Footer />
         </>
       ) : (
-        <>
+        <> 
           <Hero />
           <Services items={services} />
-          <Testimonials items={testimonials} />
-          <AboutMe />
           <Gallery items={gallery} />
+          <Conferences items={conferences} />
+          <AlAhly items={alAhly} />
           <Contact />
+          {/* Place About Me and Patients Testimonial as the last two sections */}
+          <AboutMe />
+          <Testimonials items={testimonials} />
           <Footer />
         </>
       )}
