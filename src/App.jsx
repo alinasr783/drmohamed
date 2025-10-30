@@ -12,6 +12,7 @@ import Contact from './components/ui/Contact'
 import Booking from './pages/Booking'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
+import { DeveloperCredit } from './components/shared/DeveloperCredit'
 
 import { services } from './data/services'
 import { testimonials } from './data/testimonials'
@@ -27,20 +28,24 @@ function App() {
   return (
     <div className="min-h-screen">
       <Header />
+
       {isBooking ? (
         <>
           <Booking />
           <Footer />
+          <DeveloperCredit />
         </>
       ) : isLogin ? (
         <>
           <Login />
           <Footer />
+          <DeveloperCredit />
         </>
       ) : isDashboard ? (
         <>
           <Dashboard />
           <Footer />
+          <DeveloperCredit />
         </>
       ) : (
         <> 
@@ -54,6 +59,7 @@ function App() {
           <AboutMe />
           <Testimonials items={testimonials} />
           <Footer />
+          <DeveloperCredit />
         </>
       )}
     </div>
