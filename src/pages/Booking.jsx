@@ -3,18 +3,15 @@ import bookingData from '../data/booking.json'
 import { insertBooking } from '../hooks/supabase'
 
 export default function Booking() {
-  const { doctor, services, times } = bookingData
+  const { doctor } = bookingData
 
   const [fullName, setFullName] = useState('')
   const [phone, setPhone] = useState('')
-  const [service, setService] = useState('')
   const [date, setDate] = useState('')
-  const [time, setTime] = useState('')
-  const [country, setCountry] = useState('')
   const [loading, setLoading] = useState(false)
   const [status, setStatus] = useState('')
 
-  const confirmEnabled = fullName && phone && service && date && time
+  const confirmEnabled = fullName && phone && date
 
   const handleConfirm = async () => {
     if (!confirmEnabled || loading) return
@@ -22,16 +19,13 @@ export default function Booking() {
     setStatus('')
     try {
       const row = await insertBooking({
-        service,
         date,
-        time,
         dentist: doctor.name,
         name: fullName,
         phone,
-        country,
       })
       setStatus('Appointment confirmed and saved successfully.')
-      alert(`Appointment confirmed!\n\nName: ${fullName}\nPhone: ${phone}\nService: ${service}\nDate: ${date}\nTime: ${time}\nDoctor: ${doctor.name}`)
+      alert(`Appointment confirmed!\n\nName: ${fullName}\nPhone: ${phone}\nDate: ${date}\nDoctor: ${doctor.name}`)
     } catch (err) {
       console.error(err)
       setStatus('Error submitting to Supabase. Please try again.')
@@ -64,33 +58,12 @@ export default function Booking() {
             <label className="block text-sm text-slate-600 mt-4 mb-1">Phone Number *</label>
             <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Enter your phone number (e.g., +201234567890)" className="w-full border rounded-lg px-3 py-2" />
 
-            <label className="block text-sm text-slate-600 mt-4 mb-1">Country</label>
-            <input value={country} onChange={(e) => setCountry(e.target.value)} placeholder="Enter your country" className="w-full border rounded-lg px-3 py-2" />
+            {/* Country field removed as requested */}
 
-            <label className="block text-sm text-slate-600 mt-4 mb-1">Select a Service *</label>
-            <select value={service} onChange={(e) => setService(e.target.value)} className="w-full border rounded-lg px-3 py-2">
-              <option value="">Please select a service</option>
-              {services.map((s) => (
-                <option key={s.id} value={s.title}>{s.title}</option>
-              ))}
-            </select>
+            {/* Service selection removed as requested */}
           </div>
 
-          {/* Available Times */}
-          <div className="card p-6">
-            <h3 className="font-semibold mb-4">Available Times</h3>
-            <div className="grid gap-3">
-              {times.map((t) => (
-                <button
-                  key={t}
-                  className={`text-left w-full rounded-lg px-4 py-3 border transition ${time === t ? 'bg-brand-600 text-white border-brand-600 shadow-soft' : 'bg-white text-slate-800 border-slate-200 hover:bg-slate-50'}`}
-                  onClick={() => setTime(t)}
-                >
-                  {t}
-                </button>
-              ))}
-            </div>
-          </div>
+          {/* Available Times section removed as requested */}
         </div>
 
         {/* Lower grid: date & summary */}
@@ -115,10 +88,7 @@ export default function Booking() {
           <div className="card p-6">
             <h3 className="font-semibold mb-4">Your Appointment</h3>
             <ul className="space-y-2 text-sm text-slate-700">
-              <li><span className="font-medium">Country:</span> {country || 'No country selected'}</li>
-              <li><span className="font-medium">Service:</span> {service || 'No service selected'}</li>
               <li><span className="font-medium">Date:</span> {date || 'Select a date'}</li>
-              <li><span className="font-medium">Time:</span> {time || 'Select a time'}</li>
               <li><span className="font-medium">Doctor:</span> {doctor.name}</li>
             </ul>
             <button
