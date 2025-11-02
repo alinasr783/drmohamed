@@ -4,7 +4,7 @@ export const gallery = [
     caption: 'A late-night case of a girl with a severe elbow fracture and artery injury—emergency surgery saved her arm, and a month later, she’s fully recovered',
   },
   {
-    src: 'https://scontent.fcai21-3.fna.fbcdn.net/v/t39.30808-6/506853361_1036908411929543_8869686391309949363_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEUToFInHZcoFnw63ddahE5FMg2gTtezxgUyDaBO17PGD8KVm0uNMkBAMu-_Z7SqN7hGoNu6PZc7snw4qql_x_9&_nc_ohc=OACzsF_GPDUQ7kNvwHCimIc&_nc_oc=AdmsEsi6khwv3fgUbYDUOnXy2L4w-cVCUQItYbdjvHCHemfsh5o5E2aD_bqjLI3qrCw&_nc_zt=23&_nc_ht=scontent.fcai21-3.fna&_nc_gid=IB_YwrRyf5IrBFnpTMT02w&oh=00_AfflKCqW-UeRjuENfL-7eVemUtliM8JUtFGJkBxcp6wbJw&oe=69079D89',
+    src: 'https://scontent.fcai21-4.fna.fbcdn.net/v/t39.30808-6/541835922_1097240555896328_3241874642407485829_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF4zx5Rc-0IOYtc3H2k5Sz0T-kAGTzYvHpP6QAZPNi8ekuQjeX0JvRruzyjn49PAJ1kb0BhoOC30KhTdbeMWDv2&_nc_ohc=PQ_v4r2gVAwQ7kNvwGLrmzw&_nc_oc=Adm8EOG0Xn56UNhVP_thyfEUbx7LVWbDW3Dun0WPvv3-AVMizkoEetBcfzmPVOasN44&_nc_zt=23&_nc_ht=scontent.fcai21-4.fna&_nc_gid=_AEjr-cWD93v3GjrmHPAPg&oh=00_AfggPZa8IWQzwFB-l7vYNxBfYv_GOYoQkUhxg-lW80YRRw&oe=690CAE02',
     caption: 'A doctor providing medical treatment to Al Ahly player Emam Ashour, focusing with care and professionalism during the examination',
   },
   {
@@ -16,11 +16,11 @@ export const gallery = [
     caption: 'From Chad 🇹🇩 | Right knee replacement with Dr. Mohamed Hamdy El-Gawady 💚✨',
   },
   {
-    src: 'https://scontent.fcai21-3.fna.fbcdn.net/v/t39.30808-6/482358819_1002004072063006_2438630042411630088_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGswv6Jc1oUXyE-g8g0l3o8jlALgWcM9V-OUAuBZwz1X-GQFrlIPzLahEMGrLWsawnCGJFJhZMzJCruVhgtH2od&_nc_ohc=PgxO_-MFju8Q7kNvwFsbfv5&_nc_oc=AdnxqIX5JT7YVa1M4E85oPLskMpIlgEzzdWmvdnzIxQBPJe4X2Uxg7jtef5KchfdE8U&_nc_zt=23&_nc_ht=scontent.fcai21-3.fna&_nc_gid=uFVUYd3u2JnF0PuFvXoxNA&oh=00_Aferg2lFXzu33KB9x73uqvaLWd4ext5Y45UVNftaaVJpgA&oe=69078CB5',
-    caption: 'Get to know Dr. Mohamed Hamdy El-Gawady 💚✨ | Consultant Orthopedic & Spine Surgeon | PhD Cairo Univ. | FRCS (England) | FIFA Diploma in Sports Injuries | Member of the Swiss Fracture Association | Al Ahly Club Medical Team',
+    src: 'https://scontent.fcai21-3.fna.fbcdn.net/v/t39.30808-6/481275879_962824289337956_957272160608476201_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF236MdotwwYcyuO2p4f9YeqkHQQVU60i6qQdBBVTrSLhwMf2HEFbJ2WfDG-y6-cfrIN2xpkU8Ym37w0NxDjoer&_nc_ohc=gKVH-Vo1mwsQ7kNvwGVV9_b&_nc_oc=AdlANSMc4uSyRB_E7jtdb0wHu6M8T_yaWaEwLmNJ4UudS7l0t4OsB7WTXRYp-3i9RRI&_nc_zt=23&_nc_ht=scontent.fcai21-3.fna&_nc_gid=6lUD-P8UL7NJFKU_MeGw_w&oh=00_AfgjTSRNaRl4lONfSRM8erNsm9ZGBHljm6N3k6CXMIqGaA&oe=690CA993',
+    caption: 'Wishing Hamza a Smooth Recovery',
   },
   {
-    src: 'https://scontent.fcai21-4.fna.fbcdn.net/v/t39.30808-6/481703110_962995949320790_6677955248290099949_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHl8_Vw-2WLk95BVvWB_2Ix8sMwxJWR24XywzDElZHbhTHaIk0KxXYqCHDhQYHRAbYeBZo7FMluKZLrxT5-F2vh&_nc_ohc=SDfPMrZ3inoQ7kNvwHVHfST&_nc_oc=AdnwEugO1hy1YQ3w6vuXIjVfopD2VOvNKB3jqiAmGtaxUwy5DtHmlXgeDhE0CyaAWZ0&_nc_zt=23&_nc_ht=scontent.fcai21-4.fna&_nc_gid=qvWfYB_S1jdMIP4GNdISEw&oh=00_AfcLwqlrHE8TMVCPqIJT-NhkBxcvfBFiLO3aM0igP-aa5Q&oe=6907AE7D',
-    caption: 'Honoring the Branch Manager & Deputy Minister 🥰🙏',
+    src: 'https://scontent.fcai21-4.fna.fbcdn.net/v/t51.82787-15/532352402_18038327885657465_6425271572065072895_n.webp?stp=dst-jpg_s590x590_tt6&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BEt4skyCHxkQ7kNvwFidGVY&_nc_oc=AdkqXlGyP5IlMf22XTzyEjpGX00MB4ez7XKb1duWJA_affy39OxHiUveeVOjVBJRAqE&_nc_zt=23&_nc_ht=scontent.fcai21-4.fna&_nc_gid=pqWi67mrBiSx_eCPHeotcQ&oh=00_Afd6eCQCm6EdFKzqVbjdBOGhP-UXySE86Cms50wmAFfWgQ&oe=690BE338',
+    caption: 'After and Before',
   },
 ]

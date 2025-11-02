@@ -33,9 +33,11 @@ export default function Header() {
       <div className="container">
         <div className={`${frameBase} ${frameStyle} ${scrolled ? 'max-w-[calc(100%-2rem)] md:max-w-[calc(100%-4rem)] mx-auto' : ''} ${framePadding}`}>
           <div className={`flex items-center ${scrolled ? 'gap-1' : 'gap-2'}`}>
-            <div className="h-8 w-8 rounded-full bg-brand-600 flex items-center justify-center text-white">
-              <i className="fa-solid fa-bone"></i>
-            </div>
+            <img
+              src="https://i.ibb.co/fzVk6rBG/download-removebg-preview.png"
+              alt="Elgawadi logo"
+              className="h-10 w-auto rounded-md bg-white ring-1 ring-slate-200 p-0.5"
+            />
             <span className="font-semibold">Elgawadi</span>
           </div>
           <nav className={`hidden md:flex items-center ${scrolled ? 'gap-4' : 'gap-6'} text-sm`}>

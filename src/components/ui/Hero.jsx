@@ -5,7 +5,11 @@ export default function Hero() {
     <section className="section">
       <div className="container grid md:grid-cols-[1.1fr_0.9fr] gap-10 items-center mt-2.5">
         <div>
-          <p className="text-brand-700 font-semibold">Mohamed Elgawadi</p>
+          <p className="text-brand-700 font-semibold flex items-center gap-2">
+            <span>Dr. Mohamed Hamdi Elgawadi</span>
+            <span className="text-slate-400">|</span>
+            <span dir="rtl">د. محمد حمدي الجوادي</span>
+          </p>
           <h1 className="text-3xl md:text-4xl font-bold mt-2">
             Joint Surgery, Arthroscopy & Sports Injuries
           </h1>

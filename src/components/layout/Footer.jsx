@@ -7,9 +7,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 items-start">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="h-8 w-8 rounded-full bg-brand-600 flex items-center justify-center text-white">
-                <i className="fa-solid fa-bone"></i>
-              </div>
+              <img
+                src="https://i.ibb.co/fzVk6rBG/download-removebg-preview.png"
+                alt="Elgawadi logo"
+                className="h-10 w-auto rounded-md bg-white ring-1 ring-slate-200 p-0.5"
+              />
               <span className="font-semibold">Elgawadi</span>
             </div>
             <p className="text-sm text-slate-600">
