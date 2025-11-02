@@ -27,34 +27,11 @@ export const videos = [
     tags: ['Facebook', 'Video'],
   },
   {
-    title: 'Congenital Trigger Thumb (Saeed, 4 y/o) – Surgery & Recovery',
-    year: '',
-    type: 'iframe',
-    videoUrl:
-      'https://www.facebook.com/plugins/video.php?height=322&href=https%3A%2F%2Fwww.facebook.com%2FGawadiclinic%2Fvideos%2F286063370266062%2F&show_text=false&width=560&t=0',
-    tags: ['Facebook', 'Trigger Thumb', 'Pediatrics'],
-  },
-  {
-    title: 'Rare Case: Temporary Hand Nerve Palsy Post-Surgery – Full Recovery',
-    year: '',
-    type: 'iframe',
-    videoUrl:
-      'https://www.facebook.com/plugins/video.php?height=322&href=https%3A%2F%2Fwww.facebook.com%2FGawadiclinic%2Fvideos%2F482724966826966%2F&show_text=false&width=560&t=0',
-    tags: ['Facebook', 'Hand Surgery', 'Post-op'],
-  },
-  {
-    title: 'Graduation Ceremony',
-    year: '',
-    type: 'youtube',
-    videoUrl: 'https://www.youtube.com/embed/xKnds7bO8gM?si=miYzNLgiMRt4k8ft&start=2002',
-    thumbnail: 'https://i.ibb.co/vxBKw0Yg/y1.png',
-    tags: ['YouTube'],
-  },
-  {
     title: 'UK Graduation – Dr. Mohamed Elgawadi',
     year: '',
     type: 'youtube',
     videoUrl: 'https://www.youtube.com/embed/6zRkpaxsffw?si=8feTOZV_BrsjoT5_',
+    thumbnail: 'https://i.ibb.co/VR7CD2n/27b84ef4-cc28-44ec-bf50-48837bc38e3b.jpg',
     tags: ['YouTube', 'Graduation', 'UK'],
   },
 ]

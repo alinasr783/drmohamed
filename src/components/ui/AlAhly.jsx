@@ -1,6 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function AlAhly({ items = [] }) {
+  const [lightbox, setLightbox] = useState({ open: false, index: 0 })
+
+  const openLightbox = (index) => setLightbox({ open: true, index })
+  const closeLightbox = () => setLightbox((s) => ({ ...s, open: false }))
+  const prev = () => setLightbox((s) => ({ ...s, index: (s.index - 1 + items.length) % items.length }))
+  const next = () => setLightbox((s) => ({ ...s, index: (s.index + 1) % items.length }))
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (!lightbox.open) return
+      if (e.key === 'Escape') closeLightbox()
+      if (e.key === 'ArrowLeft') prev()
+      if (e.key === 'ArrowRight') next()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [lightbox.open, items.length])
+
   return (
     <section id="alahly" className="section bg-gradient-to-br from-red-700 via-red-700 to-red-900 text-white relative">
       <div className="container">
@@ -23,7 +41,13 @@ export default function AlAhly({ items = [] }) {
               key={i}
               className="relative rounded-xl overflow-hidden bg-white ring-1 ring-slate-200 ring-offset-1 ring-offset-white shadow-card transition hover:shadow-soft hover:-translate-y-0.5"
             >
-              <img src={a.image} alt={a.title} loading="lazy" className="h-40 w-full object-cover" />
+              <img
+                src={a.image}
+                alt={a.title}
+                loading="lazy"
+                className="h-40 w-full object-cover cursor-zoom-in"
+                onClick={() => openLightbox(i)}
+              />
               {/* Small corner logo for brand consistency */}
               <img
                 src="https://m.media-amazon.com/images/I/61avIgyk8PL.jpg"
@@ -54,6 +78,61 @@ export default function AlAhly({ items = [] }) {
           ))}
         </div>
       </div>
+
+      {/* Lightbox */}
+      {lightbox.open && items[lightbox.index] && (
+        <div
+          className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={closeLightbox}
+        >
+          <div className="relative max-w-[90vw] md:max-w-[70vw] w-full" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="absolute -top-3 -right-3 h-9 w-9 rounded-full bg-white/90 text-slate-800 ring-1 ring-slate-200 shadow-card hover:bg-white"
+              onClick={closeLightbox}
+              aria-label="Close"
+            >
+              <i className="fa-solid fa-xmark"></i>
+            </button>
+
+            <div className="relative overflow-hidden rounded-xl bg-white">
+              <div className="p-3 md:p-4">
+                <img
+                  src={items[lightbox.index].image}
+                  alt={items[lightbox.index].title || 'Al Ahly work photo'}
+                  className="w-full h-auto rounded-xl"
+                />
+                {items[lightbox.index].title && (
+                  <p className="mt-2 text-sm text-slate-700">{items[lightbox.index].title}</p>
+                )}
+              </div>
+              {items.length > 1 && (
+                <>
+                  <button
+                    className="absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 text-slate-800 ring-1 ring-slate-200 shadow-card hover:bg-white"
+                    onClick={prev}
+                    aria-label="Previous"
+                  >
+                    <i className="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button
+                    className="absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 text-slate-800 ring-1 ring-slate-200 shadow-card hover:bg-white"
+                    onClick={next}
+                    aria-label="Next"
+                  >
+                    <i className="fa-solid fa-chevron-right"></i>
+                  </button>
+                </>
+              )}
+            </div>
+
+            {items.length > 1 && (
+              <div className="mt-3 text-center text-xs text-white/90">
+                {lightbox.index + 1} / {items.length}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   )
 }
