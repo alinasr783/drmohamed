@@ -23,7 +23,7 @@ export default function AboutMe() {
 
           <div className="mt-4 grid grid-cols-3 gap-3 text-center">
             <div className="card p-3">
-              <p className="text-xl font-semibold">12+ yrs</p>
+              <p className="text-xl font-semibold">16+ yrs</p>
               <p className="text-xs text-slate-600">Experience</p>
             </div>
             <div className="card p-3">
@@ -41,19 +41,12 @@ export default function AboutMe() {
             <div className="grid md:grid-cols-2 gap-3 text-sm">
               <div className="card p-4">
                 <p className="font-medium">Consultant · Nile Hospital for Health Insurance</p>
-                <p className="text-slate-600">Sep 2021 to Present · 4 yrs 2 mos · Cairo, Egypt · On-site</p>
-              </div>
-              <div className="card p-4">
-                <p className="font-medium">Consultant · Al Nil Hospital</p>
-                <p className="text-slate-600">Sep 2021 to Present · 4 yrs 2 mos · Cairo, Egypt · On-site</p>
               </div>
               <div className="card p-4">
                 <p className="font-medium">Orthopaedic Surgery Specialist · DHA</p>
-                <p className="text-slate-600">Dec 2022 to Jun 2023 · 7 mos · Dubai · Valid DHA Eligibility Letter (27/12/2023)</p>
               </div>
               <div className="card p-4">
                 <p className="font-medium">Specialist Orthopaedic Surgery · Al Mouwasat Hospital Dammam</p>
-                <p className="text-slate-600">Jun 2014 to Aug 2021 · 7 yrs 3 mos · Dammam, Saudi Arabia</p>
               </div>
             </div>
           </div>
