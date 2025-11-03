@@ -107,15 +107,6 @@ export default function Contact() {
                   <li>Thursday: 6:00–8:00 PM</li>
                 </ul>
               </div>
-
-              {/* Nile Hospital — Shubra El Kheima (Nasser) */}
-              <div className="rounded-lg ring-1 ring-slate-200 p-3">
-                <p className="font-medium flex items-center"><i className="fa-solid fa-hospital text-brand-700 mr-2"></i>Seachell Hospital</p>
-                <p className="mt-1"><a className="text-brand-700 hover:underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Nile%20Hospital%2C%20Shubra%20El%20Kheima%20Nasser">View on Google Maps</a></p>
-                <ul className="mt-1 space-y-1">
-                  <li>Tuesday: 10:00 AM</li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
