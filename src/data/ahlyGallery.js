@@ -19,11 +19,6 @@ export const ahlyGallery = [
     caption: 'Advancing sports medicine practices',
     tags: ['Sports Medicine', 'Team', 'Al Ahly'],
   },
-  {
-    src: 'https://scontent.fcai21-4.fna.fbcdn.net/v/t39.30808-6/482005504_962848939335491_3295111227487093815_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeG0tWSgpf6Go96ndfzPil-TvTBUmiOm5QW9MFSaI6blBTriBjnMWtujAkf0ojpvi20YiVtZK43xuD_gfAu2vfDb&_nc_ohc=rrVdd3rvwzgQ7kNvwFQdr0R&_nc_oc=AdmM4M8zrpQy0DszK6wFovkOcdZmpaF75i_R6PwXh15Q5JZFmGVp7ry9JWVBos4RPBI&_nc_zt=23&_nc_ht=scontent.fcai21-4.fna&_nc_gid=9GSUEu0HSRQw2M6ww3RLIA&oh=00_AfdpdCd2VCO4FZEeLH6iNhj-52BnHXu5UYR3_bZLbTIQ4w&oe=6908CA03',
-    caption: 'Percutaneous scaphoid fixation case for goalkeeper',
-    tags: ['Surgery', 'Goalkeeper', 'Al Ahly'],
-  },
   , {
     src: 'https://scontent.fcai21-3.fna.fbcdn.net/v/t39.30808-6/481988553_960997559520629_5070114223976650106_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=107&ccb=1-7&_nc_sid=714c7a&_nc_eui2=AeGsJw9EPRJ3Rbx2WuqNmuDcFs3oujecSEUWzei6N5xIRV2UEhdjhH7_pI7f0BoYuI-DpvuIIz8qX50-NoQgpDw0&_nc_ohc=K4AKt8oXo9kQ7kNvwEMiJ_3&_nc_oc=AdkgjMdhShl9dkFc6K_ZWJL6dJPj5cPFKxhZvwuf2o1i9_namLd9xZmU_v6Jjvx6_do&_nc_zt=23&_nc_ht=scontent.fcai21-3.fna&_nc_gid=Znljh5kuFv34l76XyeB-Gw&oh=00_AfiQ3-jr5GPAgqybR3usiKG3-5YdgtisNQBm4hgImUPaEQ&oe=690CF9D6',
     caption: 'Pitch-side medical care and team support',
@@ -33,11 +28,6 @@ export const ahlyGallery = [
     src: 'https://scontent.fcai21-2.fna.fbcdn.net/v/t39.30808-6/481659091_960997862853932_5150232325296068012_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=111&ccb=1-7&_nc_sid=714c7a&_nc_eui2=AeFwVgmhdNBEfsPk192BeYkLl9G_ORcLADGX0b85FwsAMUXjScL6hkGxNjeDatuQlW_-BmZh-dA3V7PsnrKXkY23&_nc_ohc=BLot5VkbIF8Q7kNvwFD_oC3&_nc_oc=AdnubMhUaUs8mpJIhnQ_HG7B69YAWj1yGGoZ3UXIA2K0h1ZbU3Jl6fB4C5VL0tUUKbE&_nc_zt=23&_nc_ht=scontent.fcai21-2.fna&_nc_gid=Znljh5kuFv34l76XyeB-Gw&oh=00_AfisUSsmn8DvGykqHR6U468R7AZtYjbzaB3uQVK6hXmgkw&oe=690CD6E3',
     caption: 'Sideline care and injury prevention',
     tags: ['Matchday', 'Al Ahly'],
-  },
-  {
-    src: 'https://scontent.fcai21-4.fna.fbcdn.net/v/t39.30808-6/481790215_963628685924183_4059632755389671212_n.jpg?stp=c267.0.1066.1066a_dst-jpg_s206x206_tt6&_nc_cat=101&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeFBfzjgJ7na1kakbqQ2_wWdyXG8FmVBeRPJcbwWZUF5EzADcyNQL2LP8PYcG32lzTreAUZdHx3gNiQZRwZ9qhgo&_nc_ohc=fyI5upBI2qwQ7kNvwFsHlLf&_nc_oc=AdlFBsv3AsfTztOSf0nOoas73WTIMwJgFtOEq8Jiy_Nh7qeHGIJFFcJbkesGB9i9La8&_nc_zt=23&_nc_ht=scontent.fcai21-4.fna&_nc_gid=KkzjbkwzAByUdtHYsTRLhw&oh=00_AfgqyDg5wwZOIAPJ5tIPLCGG86E7sSUdhSoUjgTRUc0Olw&oe=690CF58F',
-    caption: 'On-field assessment and safe transfer',
-    tags: ['Emergency', 'Al Ahly'],
   },
   {
     src: 'https://scontent.fcai21-4.fna.fbcdn.net/v/t39.30808-6/482322002_964772965809755_8820540162602210369_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=104&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeEKDDNh3o7hlqDFg5pV-093N1Nb7Himmfk3U1vseKaZ-f8uzsJdrBrGzSJ_lu3t3qTE-HMtw5VULgaQFt44DZ8m&_nc_ohc=CZBOppokiUsQ7kNvwEE-Xe9&_nc_oc=Adlmw27qC5GfUlreC2uUb8k-MxQS76Klw352OoLR_X8wlObXRoDepnnRtiEv50invI8&_nc_zt=23&_nc_ht=scontent.fcai21-4.fna&_nc_gid=hpX0IwQih9N1NgXfTe69iQ&oh=00_AfjKiZXBZWWw3wJLBgA3nILB3aWOsXHLYtpJz45Em4BU3w&oe=690CD4BC',

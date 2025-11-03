@@ -35,26 +35,6 @@ export const conferences = [
     tags: ['FootAndAnkleSurgery', 'MedicalConference'],
   },
 {
-  title: 'Participation in the SICOT Orthopaedic World Congress – Egypt',
-  location: 'Cairo, Egypt',
-  year: 2023,
-  image: 'https://media.licdn.com/dms/image/v2/D4D22AQFdNCCLwCPr8g/feedshare-shrink_800/feedshare-shrink_800/0/1687542706546?e=1763596800&v=beta&t=eLYPvIHD_QaCHeDvDiwivIsUX9d8ZgAmXZo96hpa8ew',
-  images: [
-    'https://media.licdn.com/dms/image/v2/D4D22AQFdNCCLwCPr8g/feedshare-shrink_800/feedshare-shrink_800/0/1687542706546?e=1763596800&v=beta&t=eLYPvIHD_QaCHeDvDiwivIsUX9d8ZgAmXZo96hpa8ew'
-  ],
-  tags: ['SICOT2023', 'Orthopaedics'],
-},
-{
-  title: 'FRCS Orthopaedics Fellowship Award Ceremony – Royal College of Surgeons of England',
-  location: 'London, United Kingdom',
-  year: 2023,
-  image: 'https://external.fcai21-2.fna.fbcdn.net/emg1/v/t13/4749387049910902607?url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FX7BQrqPGKTE%2Fmaxresdefault_live.jpg&fb_obo=1&utld=ytimg.com&stp=c0.5000x0.5000f_dst-jpg_flffffff_p500x261_q75_tt6&_nc_gid=_eT7ZyOHmKjqnryws5F0gA&_nc_eui2=AeGvNlsUXZbEyNzFb9U-6NWfaEkd2ZC_RbFoSR3ZkL9FseIqmyqs0KbGCXNuScl6OerXBajIFrCc6XzzGnX44RGw&_nc_oc=AdlYEpzGU4XP2kIsjCVGKmcr4LVauPgl9B7gPawBqJfoIBgUWETCXY2KdjBUVJT87GE&ccb=13-1&oh=06_Q3-4Aajc0N8Fvh68mMaCWh-5XGL5JMRVW1OorIpzssQjfFkC&oe=6908DB7C&_nc_sid=c97757',
-  images: [
-    'https://external.fcai21-2.fna.fbcdn.net/emg1/v/t13/4749387049910902607?url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FX7BQrqPGKTE%2Fmaxresdefault_live.jpg&fb_obo=1&utld=ytimg.com&stp=c0.5000x0.5000f_dst-jpg_flffffff_p500x261_q75_tt6&_nc_gid=_eT7ZyOHmKjqnryws5F0gA&_nc_eui2=AeGvNlsUXZbEyNzFb9U-6NWfaEkd2ZC_RbFoSR3ZkL9FseIqmyqs0KbGCXNuScl6OerXBajIFrCc6XzzGnX44RGw&_nc_oc=AdlYEpzGU4XP2kIsjCVGKmcr4LVauPgl9B7gPawBqJfoIBgUWETCXY2KdjBUVJT87GE&ccb=13-1&oh=06_Q3-4Aajc0N8Fvh68mMaCWh-5XGL5JMRVW1OorIpzssQjfFkC&oe=6908DB7C&_nc_sid=c97757'
-  ],
-  tags: ['FRCS', 'RoyalCollegeofSurgeons', 'Orthopaedics', 'Achievement'],
-},
-{
   title: 'Intensive Knee Surgery Course – Egyptian Arthroscopy Association (EGAA 2022)',
   location: 'Cairo, Egypt',
   year: 2022,
