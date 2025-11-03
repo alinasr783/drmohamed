@@ -65,7 +65,7 @@ export default function Videos({ items = [] }) {
                     alt={v.title}
                     loading="lazy"
                     sizes="(max-width: 768px) 90vw, 400px"
-                    className="h-40 w-full object-cover"
+                    className="h-40 w-full object-cover object-top"
                   />
                 ) : (
                   <div className="h-40 w-full bg-gradient-to-br from-slate-100 to-slate-200" />
