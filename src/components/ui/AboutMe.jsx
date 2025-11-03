@@ -40,7 +40,7 @@ export default function AboutMe() {
             <h4 className="font-semibold mb-2">Experience</h4>
             <div className="grid md:grid-cols-2 gap-3 text-sm">
               <div className="card p-4">
-                <p className="font-medium">Consultant · El Nile Hospital for Health Insurance</p>
+                <p className="font-medium">Consultant · El Nil Hospital for Health Insurance</p>
               </div>
               <div className="card p-4">
                 <p className="font-medium">Specialist Orthopaedic Surgery · Al Mouwasat Hospital Dammam</p>

@@ -18,15 +18,6 @@ export const videos = [
     tags: ['Facebook', 'Video'],
   },
   {
-    title: 'Clinic Video – 908511407493625',
-    year: '',
-    type: 'iframe',
-    videoUrl:
-      'https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FGawadiclinic%2Fvideos%2F908511407493625%2F&show_text=false&width=380&t=0',
-    thumbnail: 'https://i.ibb.co/TxHkHTfH/f3.png',
-    tags: ['Facebook', 'Video'],
-  },
-  {
     title: 'UK Graduation – Dr. Mohamed Elgawadi',
     year: '',
     type: 'youtube',

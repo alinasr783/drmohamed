@@ -54,14 +54,14 @@ export default function Contact() {
 
               {/* Andalusia New Cairo Hospital */}
               <div className="rounded-lg ring-1 ring-slate-200 p-3">
-                <p className="font-medium flex items-center"><i className="fa-solid fa-hospital text-brand-700 mr-2"></i>Seachell Hospital</p>
+                <p className="font-medium flex items-center"><i className="fa-solid fa-hospital text-brand-700 mr-2"></i>Al Andalus District, Third Settlement, New Cairo</p>
                 <ul className="mt-1 space-y-1">
                   <li>Saturday: 2:00–4:00 PM</li>
                   <li>Tuesday: 12:00–2:00 PM</li>
                   <li>Thursday: 8:00–10:00 PM</li>
                 </ul>
                 <p className="mt-1">Hotline: <a className="text-brand-700 hover:underline" href="tel:19569">19569</a></p>
-                <p className="mt-1">Address: Andalusia District, Third Settlement, New Cairo</p>
+
                 <p className="mt-1"><a className="text-brand-700 hover:underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Andalusia%20New%20Cairo%20Hospital%2C%20Third%20Settlement%2C%20New%20Cairo">View on Google Maps</a></p>
               </div>
 

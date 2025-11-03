@@ -45,7 +45,7 @@ export default function AlAhly({ items = [] }) {
                 src={a.image}
                 alt={a.title}
                 loading="lazy"
-                className="h-40 w-full object-cover cursor-zoom-in"
+                className="w-full h-auto object-contain cursor-zoom-in"
                 onClick={() => openLightbox(i)}
               />
               {/* Small corner logo for brand consistency */}
