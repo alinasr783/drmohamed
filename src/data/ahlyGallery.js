@@ -1,10 +1,5 @@
 export const ahlyGallery = [
   {
-    src: 'https://scontent.fcai21-3.fna.fbcdn.net/v/t39.30808-6/506853361_1036908411929543_8869686391309949363_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEUToFInHZcoFnw63ddahE5FMg2gTtezxgUyDaBO17PGD8KVm0uNMkBAMu-_Z7SqN7hGoNu6PZc7snw4qql_x_9&_nc_ohc=OACzsF_GPDUQ7kNvwHCimIc&_nc_oc=AdmsEsi6khwv3fgUbYDUOnXy2L4w-cVCUQItYbdjvHCHemfsh5o5E2aD_bqjLI3qrCw&_nc_zt=23&_nc_ht=scontent.fcai21-3.fna&_nc_gid=IB_YwrRyf5IrBFnpTMT02w&oh=00_AfflKCqW-UeRjuENfL-7eVemUtliM8JUtFGJkBxcp6wbJw&oe=69079D89',
-    caption: 'Providing medical care to Al Ahly player Emam Ashour',
-    tags: ['Matchday', 'Medical Room', 'Al Ahly'],
-  },
-  {
     src: 'https://scontent.fcai21-3.fna.fbcdn.net/v/t39.30808-6/482325777_964773065809745_1232908204418131703_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGpLa3k4NlFNf71kbPrt3PNFH3NFTlLdT8Ufc0VOUt1P35QNGIsy_VojwPHn4BllpPYN9DyInrz3a64pn3bJspq&_nc_ohc=IqvQkcCAWP4Q7kNvwHK3v_x&_nc_oc=Adl7CAQ7mHEDkk247orhgYn5_HfVJ794z9DpApHXma6INNzxZUcQ0ZPFpnDVuprbZIE&_nc_zt=23&_nc_ht=scontent.fcai21-3.fna&_nc_gid=SxtijQNa1ap2Defmc7Dpaw&oh=00_AfelqX7otTMuWp3angLQBDGAQ7s9nlKPAi_rLxNrK_3BsQ&oe=69089D51',
     caption: 'On-field emergency transfer management',
     tags: ['Matchday', 'Emergency', 'Al Ahly'],
