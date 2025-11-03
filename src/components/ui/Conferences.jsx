@@ -74,7 +74,7 @@ export default function Conferences({ items = [] }) {
                     alt={c.title}
                     loading="lazy"
                     sizes="(max-width: 768px) 90vw, 400px"
-                    className="h-40 w-full object-cover cursor-zoom-in"
+                    className="w-full h-auto object-contain cursor-zoom-in"
                     onClick={() => openLightbox(i, 0)}
                   />
 
@@ -123,7 +123,7 @@ export default function Conferences({ items = [] }) {
                             src={src}
                             alt="thumb"
                             loading="lazy"
-                            className="h-8 w-8 rounded-md object-cover ring-1 ring-slate-200 cursor-pointer"
+                            className="h-8 w-8 rounded-md object-contain ring-1 ring-slate-200 cursor-pointer"
                             onClick={() => openLightbox(i, k)}
                           />
                         ))}
@@ -200,7 +200,7 @@ export default function Conferences({ items = [] }) {
                     src={src}
                     alt="thumb"
                     loading="lazy"
-                    className={`h-12 w-12 rounded-md object-cover ring-2 ${lightbox.photoIndex === k ? 'ring-brand-400' : 'ring-slate-200'} cursor-pointer`}
+                    className={`h-12 w-12 rounded-md object-contain ring-2 ${lightbox.photoIndex === k ? 'ring-brand-400' : 'ring-slate-200'} cursor-pointer`}
                     onClick={() => setLightbox((s) => ({ ...s, photoIndex: k }))}
                   />
                 ))}
