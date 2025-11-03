@@ -40,10 +40,7 @@ export default function AboutMe() {
             <h4 className="font-semibold mb-2">Experience</h4>
             <div className="grid md:grid-cols-2 gap-3 text-sm">
               <div className="card p-4">
-                <p className="font-medium">Consultant · Nile Hospital for Health Insurance</p>
-              </div>
-              <div className="card p-4">
-                <p className="font-medium">Orthopaedic Surgery Specialist · DHA</p>
+                <p className="font-medium">Consultant · El Nile Hospital for Health Insurance</p>
               </div>
               <div className="card p-4">
                 <p className="font-medium">Specialist Orthopaedic Surgery · Al Mouwasat Hospital Dammam</p>
@@ -63,7 +60,7 @@ export default function AboutMe() {
             <h4 className="font-semibold mb-2">Licences</h4>
             <ul className="space-y-2 text-sm text-slate-700">
               <li>• GMC — General Medical Council (UK)</li>
-              <li>SCFHS — Saudi Commission for Health Specialties</li>
+              <li>• SCFHS — Saudi Commission for Health Specialties</li>
               <li>• DHA — Dubai Health Authority</li>
               <li>• MOH — Ministry of Health and Prevention (UAE)</li>
             </ul>
