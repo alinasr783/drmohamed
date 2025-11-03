@@ -34,4 +34,12 @@ export const videos = [
     thumbnail: 'https://i.ibb.co/VR7CD2n/27b84ef4-cc28-44ec-bf50-48837bc38e3b.jpg',
     tags: ['YouTube', 'Graduation', 'UK'],
   },
+  {
+    title: 'هل علاج خلع مفصل الكتف ينتهي عند رد المفصل مكانه؟',
+    year: '',
+    type: 'youtube',
+    videoUrl: 'https://www.youtube.com/embed/EZuiSrvPDEA',
+    thumbnail: 'https://i.ibb.co/5gKyd1mR/Screenshot-2025-11-03-094455.png',
+    tags: ['YouTube', 'Shorts'],
+  },
 ]

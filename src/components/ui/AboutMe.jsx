@@ -60,6 +60,15 @@ export default function AboutMe() {
           </div>
 
           <div className="mt-6">
+            <h4 className="font-semibold mb-2">Licences</h4>
+            <ul className="space-y-2 text-sm text-slate-700">
+              <li>• GMC — General Medical Council (UK)</li>
+              <li>• SCHS — Saudi Commission for Health Specialties</li>
+              <li>• DHA — Dubai Health Authority</li>
+              <li>• MOH — Ministry of Health and Prevention (UAE)</li>
+            </ul>
+          </div>
+          <div className="mt-6">
             <h4 className="font-semibold mb-2">Skills</h4>
             <div className="flex flex-wrap gap-2">
               {['Orthopedic Surgery','Arthroscopy','Arthroplasty','Trauma Surgery','Upper limb','Lower limb','Ankle and foot','Clinical Research','Medical Education','Healthcare Management'].map((s) => (

@@ -36,6 +36,7 @@ export default function Contact() {
 
           {/* Contact details */}
           <div className="card p-6">
+
             <h3 className="font-semibold">Locations & Schedules</h3>
             <div className="space-y-4 mt-3 text-sm">
               {/* Nasayem Clinics */}
