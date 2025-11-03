@@ -175,3 +175,217 @@ export async function deleteAhlyGallery(id) {
   }
   return true
 }
+
+// Generic REST helpers and additional content tables
+const VIDEOS_TABLE = 'drmohamed01_videos'
+const VIDEOS_BUCKET = 'drmohamed01-videos-thumbs'
+const TESTIMONIALS_TABLE = 'drmohamed01_testimonials'
+const SERVICES_TABLE = 'drmohamed01_services'
+const SERVICES_BUCKET = 'drmohamed01-services-images'
+const CLINICS_TABLE = 'drmohamed01_clinics'
+const CLINIC_IMAGES_BUCKET = 'drmohamed01-clinics-images'
+const WORKING_HOURS_TABLE = 'drmohamed01_working_hours'
+const CONFERENCES_TABLE = 'drmohamed01_conferences'
+const CONFERENCES_BUCKET = 'drmohamed01-conferences-images'
+
+async function restInsert(table, data) {
+  const res = await fetch(`${BASE_REST}/${table}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'apikey': SUPABASE_ANON_KEY,
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+      'Prefer': 'return=representation',
+    },
+    body: JSON.stringify(data),
+  })
+  if (!res.ok) {
+    const text = await res.text()
+    throw new Error(`Supabase insert (${table}) failed: ${res.status} ${text}`)
+  }
+  const json = await res.json()
+  return json && json[0] ? json[0] : json
+}
+
+async function restList(table, order = 'created_at.desc') {
+  const url = `${BASE_REST}/${table}?select=*&order=${encodeURIComponent(order)}`
+  const res = await fetch(url, {
+    headers: {
+      'Accept': 'application/json',
+      'apikey': SUPABASE_ANON_KEY,
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+    },
+  })
+  if (!res.ok) {
+    const text = await res.text()
+    throw new Error(`Supabase list (${table}) failed: ${res.status} ${text}`)
+  }
+  return res.json()
+}
+
+async function restUpdate(table, id, payload) {
+  if (!id) throw new Error('Missing id for update')
+  const url = `${BASE_REST}/${table}?id=eq.${id}`
+  const res = await fetch(url, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'apikey': SUPABASE_ANON_KEY,
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+      'Prefer': 'return=representation',
+    },
+    body: JSON.stringify(payload),
+  })
+  if (!res.ok) {
+    const text = await res.text()
+    throw new Error(`Supabase update (${table}) failed: ${res.status} ${text}`)
+  }
+  const json = await res.json()
+  return json && json[0] ? json[0] : json
+}
+
+async function restDelete(table, id) {
+  if (!id) throw new Error('Missing id for delete')
+  const url = `${BASE_REST}/${table}?id=eq.${id}`
+  const res = await fetch(url, {
+    method: 'DELETE',
+    headers: {
+      'Accept': 'application/json',
+      'apikey': SUPABASE_ANON_KEY,
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+    },
+  })
+  if (!res.ok) {
+    const text = await res.text()
+    throw new Error(`Supabase delete (${table}) failed: ${res.status} ${text}`)
+  }
+  return true
+}
+
+export async function uploadToBucket(bucket, file) {
+  if (!file) throw new Error('No file provided')
+  const safeName = file.name.replace(/\s+/g, '_')
+  const objectPath = `${Date.now()}_${safeName}`
+  const url = `${SUPABASE_URL}/storage/v1/object/${bucket}/${objectPath}`
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': file.type || 'application/octet-stream',
+      'apikey': SUPABASE_ANON_KEY,
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+    },
+    body: file,
+  })
+  if (!res.ok) {
+    const text = await res.text()
+    throw new Error(`Supabase storage upload failed: ${res.status} ${text}`)
+  }
+  const publicUrl = `${SUPABASE_URL}/storage/v1/object/public/${bucket}/${objectPath}`
+  return { publicUrl, objectPath }
+}
+
+// Videos
+export async function listVideos() {
+  return restList(VIDEOS_TABLE, 'sort_order.asc.nullslast,created_at.desc')
+}
+export async function insertVideo({ title, type, videoUrl, thumbnail, year, tags }) {
+  const payload = { title, type, videoUrl, thumbnail, year, tags: Array.isArray(tags) ? tags : (typeof tags === 'string' && tags ? tags.split(',').map(t => t.trim()).filter(Boolean) : []) }
+  return restInsert(VIDEOS_TABLE, payload)
+}
+export async function updateVideo({ id, title, type, videoUrl, thumbnail, year, tags, sort_order }) {
+  const payload = {}
+  if (typeof title !== 'undefined') payload.title = title
+  if (typeof type !== 'undefined') payload.type = type
+  if (typeof videoUrl !== 'undefined') payload.videoUrl = videoUrl
+  if (typeof thumbnail !== 'undefined') payload.thumbnail = thumbnail
+  if (typeof year !== 'undefined') payload.year = year
+  if (typeof sort_order !== 'undefined') payload.sort_order = sort_order
+  if (typeof tags !== 'undefined') payload.tags = Array.isArray(tags) ? tags : []
+  return restUpdate(VIDEOS_TABLE, id, payload)
+}
+export async function deleteVideo(id) { return restDelete(VIDEOS_TABLE, id) }
+export async function uploadVideoThumb(file) { return uploadToBucket(VIDEOS_BUCKET, file) }
+
+// Testimonials
+export async function listTestimonials() { return restList(TESTIMONIALS_TABLE, 'sort_order.asc.nullslast,created_at.desc') }
+export async function insertTestimonial({ name, message }) { return restInsert(TESTIMONIALS_TABLE, { name, message }) }
+export async function updateTestimonial({ id, name, message, sort_order }) {
+  const payload = {}
+  if (typeof name !== 'undefined') payload.name = name
+  if (typeof message !== 'undefined') payload.message = message
+  if (typeof sort_order !== 'undefined') payload.sort_order = sort_order
+  return restUpdate(TESTIMONIALS_TABLE, id, payload)
+}
+export async function deleteTestimonial(id) { return restDelete(TESTIMONIALS_TABLE, id) }
+
+// Services
+export async function listServices() { return restList(SERVICES_TABLE, 'sort_order.asc.nullslast,created_at.desc') }
+export async function insertService({ title, subtitle, icon, image }) { return restInsert(SERVICES_TABLE, { title, subtitle, icon, image }) }
+export async function updateService({ id, title, subtitle, icon, image, sort_order }) {
+  const payload = {}
+  if (typeof title !== 'undefined') payload.title = title
+  if (typeof subtitle !== 'undefined') payload.subtitle = subtitle
+  if (typeof icon !== 'undefined') payload.icon = icon
+  if (typeof image !== 'undefined') payload.image = image
+  if (typeof sort_order !== 'undefined') payload.sort_order = sort_order
+  return restUpdate(SERVICES_TABLE, id, payload)
+}
+export async function deleteService(id) { return restDelete(SERVICES_TABLE, id) }
+export async function uploadServiceImage(file) { return uploadToBucket(SERVICES_BUCKET, file) }
+
+// Clinics
+export async function listClinics() { return restList(CLINICS_TABLE, 'sort_order.asc.nullslast,created_at.desc') }
+export async function insertClinic({ name, address_en, address_ar, phone, map_url }) { return restInsert(CLINICS_TABLE, { name, address_en, address_ar, phone, map_url }) }
+export async function updateClinic({ id, name, address_en, address_ar, phone, map_url, sort_order }) {
+  const payload = {}
+  if (typeof name !== 'undefined') payload.name = name
+  if (typeof address_en !== 'undefined') payload.address_en = address_en
+  if (typeof address_ar !== 'undefined') payload.address_ar = address_ar
+  if (typeof phone !== 'undefined') payload.phone = phone
+  if (typeof map_url !== 'undefined') payload.map_url = map_url
+  if (typeof sort_order !== 'undefined') payload.sort_order = sort_order
+  return restUpdate(CLINICS_TABLE, id, payload)
+}
+export async function deleteClinic(id) { return restDelete(CLINICS_TABLE, id) }
+export async function uploadClinicImage(file) { return uploadToBucket(CLINIC_IMAGES_BUCKET, file) }
+
+// Working Hours
+export async function listWorkingHours() { return restList(WORKING_HOURS_TABLE, 'clinic_id.asc,day.asc') }
+export async function insertWorkingHour({ clinic_id, day, hours }) { return restInsert(WORKING_HOURS_TABLE, { clinic_id, day, hours }) }
+export async function updateWorkingHour({ id, clinic_id, day, hours }) {
+  const payload = {}
+  if (typeof clinic_id !== 'undefined') payload.clinic_id = clinic_id
+  if (typeof day !== 'undefined') payload.day = day
+  if (typeof hours !== 'undefined') payload.hours = hours
+  return restUpdate(WORKING_HOURS_TABLE, id, payload)
+}
+export async function deleteWorkingHour(id) { return restDelete(WORKING_HOURS_TABLE, id) }
+
+// Conferences
+export async function listConferences() { return restList(CONFERENCES_TABLE, 'sort_order.asc.nullslast,created_at.desc') }
+export async function insertConference({ title, location, year, image, images, tags }) {
+  const payload = {
+    title,
+    location,
+    year,
+    image,
+    images: Array.isArray(images) ? images : (typeof images === 'string' && images ? images.split(',').map(s => s.trim()).filter(Boolean) : []),
+    tags: Array.isArray(tags) ? tags : (typeof tags === 'string' && tags ? tags.split(',').map(s => s.trim()).filter(Boolean) : [])
+  }
+  return restInsert(CONFERENCES_TABLE, payload)
+}
+export async function updateConference({ id, title, location, year, image, images, tags, sort_order }) {
+  const payload = {}
+  if (typeof title !== 'undefined') payload.title = title
+  if (typeof location !== 'undefined') payload.location = location
+  if (typeof year !== 'undefined') payload.year = year
+  if (typeof image !== 'undefined') payload.image = image
+  if (typeof images !== 'undefined') payload.images = Array.isArray(images) ? images : []
+  if (typeof tags !== 'undefined') payload.tags = Array.isArray(tags) ? tags : []
+  if (typeof sort_order !== 'undefined') payload.sort_order = sort_order
+  return restUpdate(CONFERENCES_TABLE, id, payload)
+}
+export async function deleteConference(id) { return restDelete(CONFERENCES_TABLE, id) }
+export async function uploadConferenceImage(file) { return uploadToBucket(CONFERENCES_BUCKET, file) }
