@@ -1,20 +1,33 @@
 import React, { useMemo, useState, useEffect, useRef } from 'react'
+import { listAhlyGallery } from '../../hooks/supabase'
 
 export default function AhlyGallery({ items = [] }) {
   const [activeTag, setActiveTag] = useState('All')
+  const [remote, setRemote] = useState([])
   const [lightbox, setLightbox] = useState({ open: false, index: 0 })
   const sliderRef = useRef(null)
 
+  // Merge and normalize items from static data and Supabase
+  const mergedItems = useMemo(() => {
+    const base = Array.isArray(items) ? items.filter(Boolean) : []
+    const rem = Array.isArray(remote) ? remote.filter(Boolean) : []
+    const remMapped = rem.map((r) => ({ src: r?.src, caption: r?.caption, tags: Array.isArray(r?.tags) ? r.tags : [] }))
+    return [...remMapped, ...base].filter((i) => i && i.src)
+  }, [items, remote])
+
   const tags = useMemo(() => {
     const t = new Set(['All'])
-    items.forEach((i) => (i.tags || []).forEach((tag) => t.add(tag)))
+    mergedItems.forEach((i) => {
+      const tg = Array.isArray(i?.tags) ? i.tags : []
+      tg.forEach((tag) => t.add(tag))
+    })
     return Array.from(t)
-  }, [items])
+  }, [mergedItems])
 
   const filtered = useMemo(() => {
-    if (activeTag === 'All') return items
-    return items.filter((i) => (i.tags || []).includes(activeTag))
-  }, [items, activeTag])
+    if (activeTag === 'All') return mergedItems
+    return mergedItems.filter((i) => Array.isArray(i?.tags) && i.tags.includes(activeTag))
+  }, [mergedItems, activeTag])
 
   const openLightbox = (index) => setLightbox({ open: true, index })
   const closeLightbox = () => setLightbox((s) => ({ ...s, open: false }))
@@ -29,6 +42,17 @@ export default function AhlyGallery({ items = [] }) {
   }
 
   useEffect(() => {
+    // Fetch dynamic gallery rows from Supabase
+    const load = async () => {
+      try {
+        const data = await listAhlyGallery()
+        setRemote(Array.isArray(data) ? data : [])
+      } catch (err) {
+        console.error('Failed to load Ahly gallery from Supabase', err)
+      }
+    }
+    load()
+
     const onKey = (e) => {
       if (!lightbox.open) return
       if (e.key === 'Escape') closeLightbox()

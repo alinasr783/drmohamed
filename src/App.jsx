@@ -10,6 +10,7 @@ import Videos from './components/ui/Videos'
 import Conferences from './components/ui/Conferences'
 import AlAhly from './components/ui/AlAhly'
 import AhlyGallery from './components/ui/AhlyGallery'
+import Certificates from './components/ui/Certificates'
 import Contact from './components/ui/Contact'
 import Booking from './pages/Booking'
 import Login from './pages/Login'
@@ -23,6 +24,7 @@ import { videos } from './data/videos'
 import { conferences } from './data/conferences'
 import { alAhly } from './data/alAhly'
 import { ahlyGallery } from './data/ahlyGallery'
+import { certificates } from './data/certificates'
 
 function App() {
   const pathname = typeof window !== 'undefined' ? window.location.pathname : '/'
@@ -60,6 +62,7 @@ function App() {
           <Conferences items={conferences} />
           <AlAhly items={alAhly} />
           <AhlyGallery items={ahlyGallery} />
+          <Certificates items={certificates} />
           <Contact />
           {/* Place About Me and Patients Testimonial as the last two sections */}
           <AboutMe />
