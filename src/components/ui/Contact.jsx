@@ -54,7 +54,7 @@ export default function Contact() {
 
               {/* Andalusia New Cairo Hospital */}
               <div className="rounded-lg ring-1 ring-slate-200 p-3">
-                <p className="font-medium flex items-center"><i className="fa-solid fa-hospital text-brand-700 mr-2"></i>Seashell Hospital - Al-Andalus neighborhood -Third Settlement - New Cairo</p>
+                <p className="font-medium flex items-center"><i className="fa-solid fa-hospital text-brand-700 mr-2"></i>Seashell Hospital - Al Andalus district -Third Settlement - New Cairo</p>
                 <ul className="mt-1 space-y-1">
                   <li>Saturday: 2:00–4:00 PM</li>
                   <li>Tuesday: 12:00–2:00 PM</li>
