@@ -63,7 +63,7 @@ export default function AboutMe() {
             <h4 className="font-semibold mb-2">Licences</h4>
             <ul className="space-y-2 text-sm text-slate-700">
               <li>• GMC — General Medical Council (UK)</li>
-              <li>• SCHS — Saudi Commission for Health Specialties</li>
+              <li>SCFHS — Saudi Commission for Health Specialties</li>
               <li>• DHA — Dubai Health Authority</li>
               <li>• MOH — Ministry of Health and Prevention (UAE)</li>
             </ul>

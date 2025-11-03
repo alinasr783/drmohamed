@@ -41,7 +41,7 @@ export default function Contact() {
             <div className="space-y-4 mt-3 text-sm">
               {/* Nasayem Clinics */}
               <div className="rounded-lg ring-1 ring-slate-200 p-3">
-                <p className="font-medium flex items-center"><i className="fa-solid fa-hospital text-brand-700 mr-2"></i>Nasayem Clinics</p>
+                <p className="font-medium flex items-center"><i className="fa-solid fa-hospital text-brand-700 mr-2"></i>Nasaem Clinics</p>
                 <p className="mt-1">Hotline: <a className="text-brand-700 hover:underline" href="tel:16522">16522</a></p>
                 <p className="mt-1 font-medium">Nasayem Al-Rehab</p>
                 <p className="mt-1"><a className="text-brand-700 hover:underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Nasayem%20Clinics%2C%20Al%20Rehab%2C%20New%20Cairo">View on Google Maps</a></p>
@@ -54,7 +54,7 @@ export default function Contact() {
 
               {/* Andalusia New Cairo Hospital */}
               <div className="rounded-lg ring-1 ring-slate-200 p-3">
-                <p className="font-medium flex items-center"><i className="fa-solid fa-hospital text-brand-700 mr-2"></i>Andalusia New Cairo Hospital</p>
+                <p className="font-medium flex items-center"><i className="fa-solid fa-hospital text-brand-700 mr-2"></i>Seachell Hospital</p>
                 <ul className="mt-1 space-y-1">
                   <li>Saturday: 2:00–4:00 PM</li>
                   <li>Tuesday: 12:00–2:00 PM</li>
@@ -67,7 +67,7 @@ export default function Contact() {
 
               {/* Dar El Seha Hospital */}
               <div className="rounded-lg ring-1 ring-slate-200 p-3">
-                <p className="font-medium flex items-center"><i className="fa-solid fa-hospital text-brand-700 mr-2"></i>Dar El Seha Hospital</p>
+                <p className="font-medium flex items-center"><i className="fa-solid fa-hospital text-brand-700 mr-2"></i>Dar Alseha Hospital</p>
                 <p>Address: Diplomats Compound — Gamal Abdel Nasser Axis — Fifth Settlement</p>
                 <p>Phone: <a className="text-brand-700 hover:underline" href="tel:+201115722200">01115722200</a></p>
                 <p className="mt-1"><a className="text-brand-700 hover:underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Dar%20El%20Seha%20Hospital%2C%20Fifth%20Settlement%2C%20New%20Cairo">View on Google Maps</a></p>
@@ -79,7 +79,7 @@ export default function Contact() {
 
               {/* Al Taysir Medical Center */}
               <div className="rounded-lg ring-1 ring-slate-200 p-3">
-                <p className="font-medium flex items-center"><i className="fa-solid fa-clinic-medical text-brand-700 mr-2"></i>Al Taysir Medical Center — Hassan El Maamoun, Nasr City</p>
+                <p className="font-medium flex items-center"><i className="fa-solid fa-clinic-medical text-brand-700 mr-2"></i>Al Tayseer clinics</p>
                 <p>Phones: <a className="text-brand-700 hover:underline" href="tel:+20223498651">23498651</a> · <a className="text-brand-700 hover:underline" href="tel:+201116663993">01116663993</a> · <a className="text-brand-700 hover:underline" href="tel:+20221294050">21294050</a></p>
                 <p className="mt-1"><a className="text-brand-700 hover:underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Al%20Taysir%20Medical%20Center%2C%20Hassan%20El%20Maamoun%2C%20Nasr%20City">View on Google Maps</a></p>
                 <ul className="mt-1 space-y-1">
@@ -89,7 +89,7 @@ export default function Contact() {
 
               {/* Bedaya Hospital */}
               <div className="rounded-lg ring-1 ring-slate-200 p-3">
-                <p className="font-medium flex items-center"><i className="fa-solid fa-hospital text-brand-700 mr-2"></i>Bedaya Hospital — Hassan El Maamoun, Nasr City</p>
+                <p className="font-medium flex items-center"><i className="fa-solid fa-hospital text-brand-700 mr-2"></i>Bedayat hospital</p>
                 <p>Phones: <a className="text-brand-700 hover:underline" href="tel:+20223498882">23498882</a>/<a className="text-brand-700 hover:underline" href="tel:+20223498883">3</a>/<a className="text-brand-700 hover:underline" href="tel:+20223498884">4</a> · <a className="text-brand-700 hover:underline" href="tel:+201000551675">01000551675</a> · <a className="text-brand-700 hover:underline" href="tel:+20115397778">0115397778</a></p>
                 <p className="mt-1"><a className="text-brand-700 hover:underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Bedaya%20Hospital%2C%20Hassan%20El%20Maamoun%2C%20Nasr%20City">View on Google Maps</a></p>
                 <ul className="mt-1 space-y-1">
@@ -110,7 +110,7 @@ export default function Contact() {
 
               {/* Nile Hospital — Shubra El Kheima (Nasser) */}
               <div className="rounded-lg ring-1 ring-slate-200 p-3">
-                <p className="font-medium flex items-center"><i className="fa-solid fa-hospital text-brand-700 mr-2"></i>Nile Hospital — Shubra El Kheima (Nasser)</p>
+                <p className="font-medium flex items-center"><i className="fa-solid fa-hospital text-brand-700 mr-2"></i>Seachell Hospital</p>
                 <p className="mt-1"><a className="text-brand-700 hover:underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Nile%20Hospital%2C%20Shubra%20El%20Kheima%20Nasser">View on Google Maps</a></p>
                 <ul className="mt-1 space-y-1">
                   <li>Tuesday: 10:00 AM</li>
