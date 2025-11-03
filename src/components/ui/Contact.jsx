@@ -43,7 +43,7 @@ export default function Contact() {
               <div className="rounded-lg ring-1 ring-slate-200 p-3">
                 <p className="font-medium flex items-center"><i className="fa-solid fa-hospital text-brand-700 mr-2"></i>Nasaem Clinics</p>
                 <p className="mt-1">Hotline: <a className="text-brand-700 hover:underline" href="tel:16522">16522</a></p>
-                <p className="mt-1 font-medium">Nasayem Al-Rehab</p>
+                <p className="mt-1 font-medium">Nasaem Al-Rehab</p>
                 <p className="mt-1"><a className="text-brand-700 hover:underline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Nasayem%20Clinics%2C%20Al%20Rehab%2C%20New%20Cairo">View on Google Maps</a></p>
                 <ul className="mt-1 space-y-1">
                   <li>Monday: 8:00–10:00 PM</li>
