@@ -5,7 +5,7 @@ export const gallery = [
   },
   {
     src: 'https://scontent.fcai21-4.fna.fbcdn.net/v/t39.30808-6/541835922_1097240555896328_3241874642407485829_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF4zx5Rc-0IOYtc3H2k5Sz0T-kAGTzYvHpP6QAZPNi8ekuQjeX0JvRruzyjn49PAJ1kb0BhoOC30KhTdbeMWDv2&_nc_ohc=PQ_v4r2gVAwQ7kNvwGLrmzw&_nc_oc=Adm8EOG0Xn56UNhVP_thyfEUbx7LVWbDW3Dun0WPvv3-AVMizkoEetBcfzmPVOasN44&_nc_zt=23&_nc_ht=scontent.fcai21-4.fna&_nc_gid=_AEjr-cWD93v3GjrmHPAPg&oh=00_AfggPZa8IWQzwFB-l7vYNxBfYv_GOYoQkUhxg-lW80YRRw&oe=690CAE02',
-    caption: 'A doctor providing medical treatment to Al Ahly player Emam Ashour, focusing with care and professionalism during the examination',
+    caption: 'After and Before',
   },
   {
     src: 'https://scontent.fcai21-4.fna.fbcdn.net/v/t39.30808-6/482241875_968254515461600_3404380865977181645_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEyMhZzA1NUdCQy5w9HEPLBralmUKBlMvetqWZQoGUy99FdrJcOEdmFjTgYzV1_YdgPW3iP5WZusM2Rl0b7oh8l&_nc_ohc=R6Yx347ixGsQ7kNvwFuXrkg&_nc_oc=AdkLxU8_pveInIl05MoCSuiK0v1WAavlL5376Lvar9VTznPlbkh8jJYhXiNEKLOvYt0&_nc_zt=23&_nc_ht=scontent.fcai21-4.fna&_nc_gid=o_zdaZAOobtOuVvwT20ZtQ&oh=00_AffHp16UByO2KVw-CUsLxNwKOM6IYseILBovb2CjwP0T4g&oe=69079E50',
@@ -23,4 +23,5 @@ export const gallery = [
     src: 'https://scontent.fcai21-4.fna.fbcdn.net/v/t51.82787-15/532352402_18038327885657465_6425271572065072895_n.webp?stp=dst-jpg_s590x590_tt6&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BEt4skyCHxkQ7kNvwFidGVY&_nc_oc=AdkqXlGyP5IlMf22XTzyEjpGX00MB4ez7XKb1duWJA_affy39OxHiUveeVOjVBJRAqE&_nc_zt=23&_nc_ht=scontent.fcai21-4.fna&_nc_gid=pqWi67mrBiSx_eCPHeotcQ&oh=00_Afd6eCQCm6EdFKzqVbjdBOGhP-UXySE86Cms50wmAFfWgQ&oe=690BE338',
     caption: 'After and Before',
   },
+  
 ]
