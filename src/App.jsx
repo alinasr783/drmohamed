@@ -56,16 +56,19 @@ function App() {
       ) : (
         <> 
           <Hero />
+          <AboutMe />
+          <Certificates items={certificates} />
+          <Conferences items={conferences} />
           <Services items={services} />
           <Gallery items={gallery} />
           <Videos items={videos} />
-          <Conferences items={conferences} />
+  
           <AlAhly items={alAhly} />
           <AhlyGallery items={ahlyGallery} />
-          <Certificates items={certificates} />
+
           <Contact />
           {/* Place About Me and Patients Testimonial as the last two sections */}
-          <AboutMe />
+
           <Testimonials items={testimonials} />
           <Footer />
           <DeveloperCredit />
