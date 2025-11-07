@@ -34,7 +34,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-slate-600">
               <li><i className="fa-solid fa-location-dot mr-2 text-brand-600"></i>New Cairo, Egypt</li>
               <li><i className="fa-solid fa-phone mr-2 text-brand-600"></i>+20 111 222 333</li>
-              <li><i className="fa-solid fa-envelope mr-2 text-brand-600"></i>info@elgawadiclinic.com</li>
+              <li><i className="fa-solid fa-envelope mr-2 text-brand-600"></i>Dr.m.gawadi@hotmail.com</li>
             </ul>
           </div>
           <div>

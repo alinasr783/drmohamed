@@ -9,7 +9,7 @@ export const certificates = [
     src: 'https://i.ibb.co/ch8NTWsb/27e8f1c0-777f-47a3-91c9-58857ded39b5.jpg',
   },
   {
-    src: 'https://i.ibb.co/v4LRVnJY/09dba9d9-db81-4a5c-aab7-6083687bdbc7.jpg',
+    src: 'https://i.ibb.co/v4LRVnJaY/09dba9d9-db81-4a5c-aab7-6083687bdbc7.jpg',
   },
 ]
 
