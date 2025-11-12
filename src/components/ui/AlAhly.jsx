@@ -72,6 +72,7 @@ export default function AlAhly({ items = [] }) {
                 <div className="mt-3 flex items-center gap-2">
                   <a href="/booking" className="btn btn-primary text-sm">Book an appointment</a>
                   <a href="#contact" className="btn btn-outline text-sm">Contact us</a>
+                  <a href="https://drapp.app.link/wPZ0NQh17Xb" target="_blank" rel="noreferrer" className="btn btn-outline text-sm">Online consultation</a>
                 </div>
               </div>
             </div>

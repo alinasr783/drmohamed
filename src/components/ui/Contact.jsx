@@ -18,6 +18,20 @@ export default function Contact() {
               <a className="btn btn-outline flex items-center justify-center" href="https://wa.me/201008821107" target="_blank" rel="noreferrer"><i className="fa-brands fa-whatsapp mr-2"></i>WhatsApp Booking</a>
               <a className="btn btn-outline flex items-center justify-center" href="https://goo.gl/maps/r7CjYDxgbyxtSgUD7?g_st=aw" target="_blank" rel="noreferrer"><i className="fa-solid fa-map mr-2"></i>Private Clinic Map</a>
             </div>
+            {/* Online consultation notice */}
+            <div className="mt-4 p-3 rounded-lg bg-brand-50 ring-1 ring-brand-200 text-sm">
+              <p>
+                For online consultation{' '}
+                <a
+                  href="https://drapp.app.link/wPZ0NQh17Xb"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-brand-700 underline"
+                >
+                  Click here
+                </a>
+              </p>
+            </div>
 
             <div className="mt-6">
               <h3 className="font-semibold">Private Clinic Hours</h3>

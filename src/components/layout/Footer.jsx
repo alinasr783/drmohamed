@@ -26,6 +26,7 @@ export default function Footer() {
               <li><a href="/#about" className="text-slate-700 hover:text-brand-700">About</a></li>
               <li><a href="/#gallery" className="text-slate-700 hover:text-brand-700">Gallery</a></li>
               <li><a href="/#contact" className="text-slate-700 hover:text-brand-700">Contact</a></li>
+              <li><a href="https://drapp.app.link/wPZ0NQh17Xb" target="_blank" rel="noreferrer" className="text-slate-700 hover:text-brand-700">Online consultation</a></li>
               <li><a href="/login" className="text-slate-700 hover:text-brand-700">Are you the admin?</a></li>
             </ul>
           </div>
