@@ -389,3 +389,44 @@ export async function updateConference({ id, title, location, year, image, image
 }
 export async function deleteConference(id) { return restDelete(CONFERENCES_TABLE, id) }
 export async function uploadConferenceImage(file) { return uploadToBucket(CONFERENCES_BUCKET, file) }
+
+// Articles
+const ARTICLES_TABLE = 'articles'
+
+export async function listArticles() { 
+  return restList(ARTICLES_TABLE, 'created_at.desc') 
+}
+
+export async function getArticleById(id) {
+  const url = `${BASE_REST}/${ARTICLES_TABLE}?id=eq.${id}`
+  const res = await fetch(url, {
+    headers: {
+      'Accept': 'application/json',
+      'apikey': SUPABASE_ANON_KEY,
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+    },
+  })
+  if (!res.ok) {
+    const text = await res.text()
+    throw new Error(`Supabase get article failed: ${res.status} ${text}`)
+  }
+  const data = await res.json()
+  return data && data[0] ? data[0] : null
+}
+
+export async function insertArticle({ title_en, title_ar, content_en, content_ar, image_url, show_on_homepage }) { 
+  return restInsert(ARTICLES_TABLE, { title_en, title_ar, content_en, content_ar, image_url, show_on_homepage }) 
+}
+
+export async function updateArticle({ id, title_en, title_ar, content_en, content_ar, image_url, show_on_homepage }) {
+  const payload = {}
+  if (typeof title_en !== 'undefined') payload.title_en = title_en
+  if (typeof title_ar !== 'undefined') payload.title_ar = title_ar
+  if (typeof content_en !== 'undefined') payload.content_en = content_en
+  if (typeof content_ar !== 'undefined') payload.content_ar = content_ar
+  if (typeof image_url !== 'undefined') payload.image_url = image_url
+  if (typeof show_on_homepage !== 'undefined') payload.show_on_homepage = show_on_homepage
+  return restUpdate(ARTICLES_TABLE, id, payload)
+}
+
+export async function deleteArticle(id) { return restDelete(ARTICLES_TABLE, id) }

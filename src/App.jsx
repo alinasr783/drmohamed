@@ -1,4 +1,5 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Hero from './components/ui/Hero'
@@ -12,9 +13,12 @@ import AlAhly from './components/ui/AlAhly'
 import AhlyGallery from './components/ui/AhlyGallery'
 import Certificates from './components/ui/Certificates'
 import Contact from './components/ui/Contact'
+import Articles from './components/ui/Articles'
 import Booking from './pages/Booking'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
+import ArticlesPage from './pages/Articles'
+import ArticleDetail from './pages/ArticleDetail'
 import { DeveloperCredit } from './components/shared/DeveloperCredit'
 
 import { services } from './data/services'
@@ -27,53 +31,75 @@ import { ahlyGallery } from './data/ahlyGallery'
 import { certificates } from './data/certificates'
 
 function App() {
-  const pathname = typeof window !== 'undefined' ? window.location.pathname : '/'
-  const isBooking = pathname.startsWith('/booking')
-  const isLogin = pathname.startsWith('/login')
-  const isDashboard = pathname.startsWith('/dashboard')
   return (
     <div className="min-h-screen">
       <Header />
+      
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Hero />
+            <AboutMe />
+            <Certificates items={certificates} />
+            <Conferences items={conferences} />
+            <Services items={services} />
+            <Gallery items={gallery} />
+            <Videos items={videos} />
 
-      {isBooking ? (
-        <>
-          <Booking />
-          <Footer />
-          <DeveloperCredit />
-        </>
-      ) : isLogin ? (
-        <>
-          <Login />
-          <Footer />
-          <DeveloperCredit />
-        </>
-      ) : isDashboard ? (
-        <>
-          <Dashboard />
-          <Footer />
-          <DeveloperCredit />
-        </>
-      ) : (
-        <> 
-          <Hero />
-          <AboutMe />
-          <Certificates items={certificates} />
-          <Conferences items={conferences} />
-          <Services items={services} />
-          <Gallery items={gallery} />
-          <Videos items={videos} />
-  
-          <AlAhly items={alAhly} />
-          <AhlyGallery items={ahlyGallery} />
+            <AlAhly items={alAhly} />
+            <AhlyGallery items={ahlyGallery} />
+            
+            <Articles />
 
-          <Contact />
-          {/* Place About Me and Patients Testimonial as the last two sections */}
+            <Contact />
+            {/* Place About Me and Patients Testimonial as the last two sections */}
 
-          <Testimonials items={testimonials} />
-          <Footer />
-          <DeveloperCredit />
-        </>
-      )}
+            <Testimonials items={testimonials} />
+            <Footer />
+            <DeveloperCredit />
+          </>
+        } />
+        
+        <Route path="/booking" element={
+          <>
+            <Booking />
+            <Footer />
+            <DeveloperCredit />
+          </>
+        } />
+        
+        <Route path="/login" element={
+          <>
+            <Login />
+            <Footer />
+            <DeveloperCredit />
+          </>
+        } />
+        
+        <Route path="/dashboard" element={
+          <>
+            <Dashboard />
+            <Footer />
+            <DeveloperCredit />
+          </>
+        } />
+        
+        <Route path="/articles" element={
+          <>
+            <ArticlesPage />
+            <Footer />
+            <DeveloperCredit />
+          </>
+        } />
+        
+        <Route path="/article/:id" element={
+          <>
+            <ArticleDetail />
+            <Footer />
+            <DeveloperCredit />
+          </>
+        } />
+      </Routes>
     </div>
   )
 }

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const nav = [
   { label: 'Home', href: '/' },
   { label: 'Booking', href: '/booking' },
+  { label: 'Articles', href: '/articles' },
   { label: 'About', href: '/#about' },
   { label: 'Gallery', href: '/#gallery' },
   { label: 'Contact', href: '/#contact' },
@@ -42,13 +44,13 @@ export default function Header() {
           </div>
           <nav className={`hidden md:flex items-center ${scrolled ? 'gap-4' : 'gap-6'} text-sm`}>
             {nav.map((n) => (
-              <a key={n.href} href={n.href} className="text-slate-700 hover:text-brand-700">
+              <Link key={n.href} to={n.href} className="text-slate-700 hover:text-brand-700">
                 {n.label}
-              </a>
+              </Link>
             ))}
           </nav>
           <div className={`flex items-center ${scrolled ? 'gap-1' : 'gap-2'}`}>
-            <a href="/booking" className="btn btn-primary">Booking</a>
+            <Link to="/booking" className="btn btn-primary">Booking</Link>
             <button
               className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100"
               aria-label="Toggle navigation"
@@ -65,22 +67,22 @@ export default function Header() {
           <div className="md:hidden mt-2 mx-2 rounded-xl bg-white shadow-card ring-1 ring-slate-200">
             <nav className="grid gap-1 p-2 text-sm">
               
-              <a
-                href="/booking"
+              <Link
+                to="/booking"
                 className="px-3 py-2 rounded-lg bg-brand-600 text-white hover:bg-brand-700"
                 onClick={() => setOpen(false)}
               >
                 Book Appointment
-              </a>
+              </Link>
               {nav.map((n) => (
-                <a
+                <Link
                   key={`m-${n.href}`}
-                  href={n.href}
+                  to={n.href}
                   className="px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-50 hover:text-brand-700"
                   onClick={() => setOpen(false)}
                 >
                   {n.label}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>
