@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Hero from './components/ui/Hero'
+import BookingSection from './components/ui/BookingSection'
 import Services from './components/ui/Services'
 import Testimonials from './components/ui/Testimonials'
 import AboutMe from './components/ui/AboutMe'
@@ -39,15 +40,15 @@ function App() {
         <Route path="/" element={
           <>
             <Hero />
+            <AlAhly items={alAhly} />
+            <AhlyGallery items={ahlyGallery} />
+            <BookingSection />
             <AboutMe />
             <Certificates items={certificates} />
             <Conferences items={conferences} />
             <Services items={services} />
             <Gallery items={gallery} />
             <Videos items={videos} />
-
-            <AlAhly items={alAhly} />
-            <AhlyGallery items={ahlyGallery} />
             
             <Articles />
 
